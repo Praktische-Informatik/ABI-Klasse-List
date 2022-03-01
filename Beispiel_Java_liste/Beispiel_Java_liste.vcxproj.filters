@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Beispiel_Java_liste.cpp">
+    <ClCompile Include="Test.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="List.cpp">
@@ -32,5 +32,8 @@
     <ClInclude Include="Person.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
