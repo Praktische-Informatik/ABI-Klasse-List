@@ -12,7 +12,9 @@ public:
 	{
 		meineListe = new list<T>;
 	}
-	~List() { delete meineListe; }
+	~List() { 
+		//delete meineListe; // @Aeneas: gelöscht, da sonst eine Liste in der Liste gelöscht wird (siehe Aquarium Lebewesenliste)
+	}
 
 	void add(T);		// hängt das Objekt obj vom Typ T am Ende der Liste an.
 

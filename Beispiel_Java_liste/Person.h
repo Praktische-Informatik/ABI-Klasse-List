@@ -17,7 +17,7 @@ private:
 	double vermoegen; // in Euro und Euro-Cent
 	char geschlecht; // w/m/d
 	List<Person*> meineFreunde;
-
+	
 public:
 	Person();
 	Person(string vorn, string nachn, string plz, string ort, double vermoegen, char geschlecht);
