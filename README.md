@@ -1,4 +1,4 @@
-# Abi-Klasse-List
+# Abi-Klasse-List (Übersetzt die Java "List" Funktionalitäten in C++) 
 **Wenn diese Liste als Rückgabewert verwendet wird, muss ein '&' dahinter gesetzt werden, da es sonst zu fehlern kommen kann!**
 *Beispiel: List<Person\*>& getPersonen() { ... }*
 
