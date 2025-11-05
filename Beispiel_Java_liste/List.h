@@ -2,7 +2,7 @@
 #include <list>
 using namespace std;
 
-// Eine Liste für eine beliebige Klasse T
+// Eine Liste fÃ¼r eine beliebige Klasse T
 template<class T> class List
 {
 private:
@@ -13,25 +13,25 @@ public:
 		meineListe = new list<T>;
 	}
 	~List() { 
-		//delete meineListe; // @Aeneas: gelöscht, da sonst eine Liste in der Liste gelöscht wird (siehe Aquarium Lebewesenliste)
+		//delete meineListe; // @Aeneas: gelÃ¶scht, da sonst eine Liste in der Liste gelÃ¶scht wird (siehe Aquarium Lebewesenliste)
 	}
 
-	void add(T);		// hängt das Objekt obj vom Typ T am Ende der Liste an.
+	void add(T);		// hÃ¤ngt das Objekt obj vom Typ T am Ende der Liste an.
 
-	void add(int index, T obj);  //fügt das Objekt obj vom Typ T an der Position index in die Liste ein.
+	void add(int index, T obj);  //fÃ¼gt das Objekt obj vom Typ T an der Position index in die Liste ein.
 
 	bool contains(T obj);    //liefert true, wenn das Objekt obj in der Liste enthalten ist, andernfalls false.
 
-	T get(int index);       //liefert das Listenelement an der Position index (bei Null beginnend) zurück bzw. null, falls index negativ oder größer
+	T get(int index);       //liefert das Listenelement an der Position index (bei Null beginnend) zurÃ¼ck bzw. null, falls index negativ oder grÃ¶ÃŸer
 						    //gleich der Anzahl der momentan enthaltenen Elemente ist.
 
-	T remove(int index);	//entfernt das Listenelement an der Position index (bei Null beginnend).Liefert das entfernte Element zurück bzw.null,
-							//falls index negativ oder größer gleich der Anzahl der momentan enthaltenen Elemente ist.
+	T remove(int index);	//entfernt das Listenelement an der Position index (bei Null beginnend).Liefert das entfernte Element zurÃ¼ck bzw.null,
+							//falls index negativ oder grÃ¶ÃŸer gleich der Anzahl der momentan enthaltenen Elemente ist.
 
 	bool remove(T obj);	//entfernt das Objekt obj aus der Liste. Falls obj mehrmals in der Liste enthalten ist, wird nur das erste
-							//Vorkommen entfernt.Der Rückgabewert ist true, falls das Objekt gefunden und entfernt wurde,
+							//Vorkommen entfernt.Der RÃ¼ckgabewert ist true, falls das Objekt gefunden und entfernt wurde,
 							//andernfalls ist er false.
-	int size();				//liefert die Anzahl der Elemente in der Liste zurück.
+	int size();				//liefert die Anzahl der Elemente in der Liste zurÃ¼ck.
 };
 
 
@@ -44,7 +44,7 @@ template<class T> int List<T>::size()
 }
 
 
-// Neues Element in die Liste einfügen
+// Neues Element in die Liste einfÃ¼gen
 template<class T> void List<T>::add(T obj)
 {
 	meineListe->push_back(obj);
@@ -96,7 +96,7 @@ template<class T> bool  List<T>::remove(T obj)
 	if (obj == 0)
 		return false;
 
-	for (std::list<T>::template iterator it = meineListe->begin(); it != meineListe->end(); ++it)
+	for (typename std::list<T>::iterator it = meineListe->begin(); it != meineListe->end(); ++it)
 	{
 		if ((*it) == obj)
 		{
